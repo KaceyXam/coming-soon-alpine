@@ -2,7 +2,7 @@
 
 ## Day 2 - Alpine js
 
-Today I did another [Frontend Mentor](https://www.frontendmentor.io/) newbie level project. The priject I did was [Coming soon page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0).
+Today I did another [Frontend Mentor](https://www.frontendmentor.io/) newbie level project. The project I did was [Coming soon page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0).
 
 ### What is Alpine js
 
