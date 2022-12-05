@@ -1,0 +1,171 @@
+:root {
+	font-family: "Josefin Sans", sans-serif;
+
+	--desaturated-red: hsl(0, 36%, 70%);
+	--soft-red: hsl(0, 93%, 68%);
+	--dark-red: hsl(0, 6%, 24%);
+
+	--grad-light: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+	--grad-med: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+/* css reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+	font: inherit;
+}
+/* end css reset */
+
+.thin {
+	font-weight: 300;
+	color: var(--desaturated-red);
+}
+
+body {
+	background-image: white;
+	min-height: 100vh;
+}
+
+main {
+	padding-top: 5rem;
+}
+
+.top-icon {
+	position: fixed;
+	top: 0;
+	padding: 2em;
+	background-color: white;
+	width: 100%;
+}
+
+.hero-image {
+	max-height: 20rem;
+	width: 100%;
+	object-fit: cover;
+	object-position: top;
+	margin-bottom: 4rem;
+}
+
+.coming-soon-content {
+	display: flex;
+	gap: 2rem;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.coming-soon-content h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5rem;
+}
+
+.coming-soon-content p {
+	color: var(--desaturated-red);
+	max-width: 350px;
+	line-height: 1.7;
+}
+
+.email-form {
+	display: grid;
+	grid-template-columns: 1fr 6rem;
+	width: 375px;
+}
+
+.email-form input,
+.email-form button {
+	padding: 1em 1.5em;
+	border-radius: 999vh;
+	grid-row: 1;
+	border: none;
+}
+
+.email-form button {
+	grid-column: 2;
+	display: flex;
+	place-content: center;
+	background-image: var(--grad-med);
+	transition: 75ms ease-in-out;
+}
+
+.email-form button:hover {
+	filter: brightness(112%);
+	scale: 105%;
+	box-shadow: 0 10px 15px -10px var(--desaturated-red);
+}
+
+.email-form input {
+	grid-column: 1 / -1;
+	border: 2px solid var(--desaturated-red);
+	outline-offset: 4px;
+}
+
+@media (min-width: 900px) {
+	main {
+		padding: 0;
+		display: grid;
+		grid-template-columns: 55% 45%;
+		background-image: url("images/bg-pattern-desktop.svg");
+	}
+
+	.hero-image {
+		grid-column: 2;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+		max-height: 100vh;
+		margin: 0;
+	}
+
+	.coming-soon-content {
+		grid-column: 1;
+		grid-row: 1;
+		display: flex;
+		margin-left: 20%;
+		margin-top: 4rem;
+		align-items: flex-start;
+		text-align: left;
+		gap: 2rem;
+	}
+
+	.coming-soon-content h1 {
+		font-size: 5rem;
+		line-height: 1.2;
+	}
+	.coming-soon-content p {
+		max-width: 475px;
+	}
+
+	.top-icon {
+		position: static;
+		padding: 0;
+		margin-bottom: 8rem;
+	}
+
+	.email-form {
+		max-width: 475px;
+		width: 100%;
+	}
+}
